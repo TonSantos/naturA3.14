@@ -17,10 +17,7 @@ class SemaceApiClient:
     @try_connection
     def login_page(self):
         semace_response = http_request.get(SemaceConnection.SEMACE_LOGIN_URL)
-        print("cookies:")
-        print(semace_response.cookies)
-        print("javax_faces_view_state:")
-        print(SemaceConverter(semace_response.content).javax_faces_view_state)
+        
         if semace_response.status_code != 200:
             return (SemaceConnection._connection_error_messages, semace_response.status_code)
         else:
