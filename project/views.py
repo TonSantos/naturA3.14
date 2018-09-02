@@ -21,4 +21,8 @@ def login():
     data, status = client.login_page()
     return jsonify(data) ,status
 
-    
+@app.route("/processos")
+def processos():
+    client = SemaceApiClient()
+    data, status = client.list_processos()
+    return jsonify(data), status
