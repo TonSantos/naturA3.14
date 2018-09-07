@@ -1,0 +1,4 @@
+Flask==1.0.*
+Flask-cors==3.0.*
+pytest==3.8.*
+beautifulsoup4==4.6.*
