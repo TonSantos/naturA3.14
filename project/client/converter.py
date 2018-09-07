@@ -36,7 +36,7 @@ class SemaceConverter:
 
     def __get_processos(self):
         find_elements = self.soup.find(id="select_tipo_processo")
-        print(self.soup)
+       
         processos = []
         if find_elements:
             for option in find_elements.find_all('option'):

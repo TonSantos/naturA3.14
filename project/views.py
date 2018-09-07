@@ -26,3 +26,9 @@ def processos():
     client = SemaceApiClient()
     data, status = client.list_processos()
     return jsonify(data), status
+
+@app.route("/grupos-de-atividades")
+def grupos_de_atividades():
+    client = SemaceApiClient()
+    data, status = client.list_grupos()
+    return jsonify(data), status
